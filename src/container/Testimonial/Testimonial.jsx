@@ -38,18 +38,15 @@ const Testimonial = () => {
             })
     }, [])
 
-    const tst = testimonials[currentIndex];
-
     return (
         <>
             <Swiper
                 modules={[Navigation, A11y]}
-                spaceBetween={0}
                 slidesPerView={1}
                 navigation
                 loop={true}
             >
-                {testimonials.map((test, testIndex) => (
+                {testimonials.map((tst, testIndex) => (
                     <SwiperSlide key={testIndex}>
                         <div className={'app__testimonial-item app__flex'}>
                             <img src={urlFor(tst.imgurl)} alt="testimonial"/>
