@@ -23,7 +23,7 @@ const About = () => {
             <div className="app__profiles">
                 {abouts.map((about, index) => (
                     <motion.div
-                        whileInVie w={{opacity: 1}}
+                        whileInView={{opacity: 1}}
                         whileHover={{scale: 1.1}}
                         transition={{duration: .5, type: 'tween'}}
                         className="app__profile-item"
