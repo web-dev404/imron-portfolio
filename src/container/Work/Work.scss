@@ -41,18 +41,24 @@
 
 .app__work-portfolio {
   display: flex;
-  align-items: center;
   flex-wrap: wrap;
   justify-content: center;
+  grid-gap: 20px;
+  min-width: 0;
+  max-width: 100%;
+  margin-top: 50px;
 
   .app__work-item {
-    width: 270px;
+    margin: 0 auto;
+    flex-basis: 48%;
+    max-width: 432px;
+    display: flex;
     flex-direction: column;
-    margin: 2rem;
+    justify-content: flex-start;
     padding: 1rem;
     background: #fff;
     color: #000;
-    border-radius: .5rem;
+    border-radius: 1rem;
     cursor: pointer;
     transition: all .3s ease;
 
@@ -61,13 +67,11 @@
     }
 
     @media screen and (min-width: 2000px) {
-      width: 470px;
       padding: 1.25rem;
       border-radius: .75rem;
     }
-    @media screen and (max-width: 300px) {
-      width: 100%;
-      margin: 1rem;
+    @media screen and (max-width: 450px) {
+      padding: 15px 10px;
     }
   }
 }
@@ -83,6 +87,10 @@
     height: 100%;
     border-radius: .5rem;
     object-fit: cover;
+
+    @media screen and (max-width: 400px) {
+      height: 200px;
+    }
   }
 
   @media screen and (min-width: 2000px) {
@@ -101,7 +109,7 @@
   background: rgba(0,0,0,.5);
   border-radius: .5rem;
   opacity: 0;
-  transition: all .3s ease;
+  transition: all 0.01s;
 
   div {
     width: 50px;

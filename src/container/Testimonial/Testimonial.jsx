@@ -10,10 +10,6 @@ import {HiChevronLeft, HiChevronRight} from "react-icons/hi";
 import { Navigation, Pagination, Scrollbar, A11y} from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
-import 'swiper/css';
-import 'swiper/css/navigation';
-import 'swiper/css/pagination';
-
 const Testimonial = () => {
     const [brands, setBrands] = useState([]);
     const [testimonials, setTestimonials] = useState([]);
@@ -69,7 +65,7 @@ const Testimonial = () => {
                         transition={{duration: .5, type: 'tween'}}
                         key={brand._id}
                     >
-                        <img src={urlFor(brand.imgUrl)} alt={brand.name}/>
+                        <img src={urlFor(brand.imgUrl)} className={brand.name} alt={brand.name}/>
                     </motion.div>
                 ))}
             </div>

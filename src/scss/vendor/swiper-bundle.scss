@@ -216,23 +216,17 @@
 .swiper-button-prev,
 .swiper-button-next {
   position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 74px;
-  height: 74px;
+  bottom: 0;
+  width: 40px;
+  height: 40px;
   z-index: 10;
-  background: rgba(255, 255, 255, 0.14);
+  background: var(--secondary-color);
   border-radius: 50%;
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
   color: var(--swiper-navigation-color, var(--swiper-theme-color));
-
-  @media($media_sm) {
-    width: 15px;
-    height: 15px;
-  }
 }
 
 .swiper-button-prev.swiper-button-disabled,
@@ -262,10 +256,15 @@
 
 .swiper-button-prev,
 .swiper-rtl .swiper-button-next {
-  left: 20px;
+  left: 45%;
+  background-image: url("../../assets/arrow-right.svg");
+  background-repeat: no-repeat;
+  background-size: 70%;
+  background-position: center;
+  transform: rotate(180deg);
 
-  @media($media_xxxl) {
-    left: 0;
+  @media(max-width: 1000px) {
+    left: 30%;
   }
 }
 
@@ -274,10 +273,14 @@
 
 .swiper-button-next,
 .swiper-rtl .swiper-button-prev {
-  right: 20px;
+  right: 45%;
+  background-image: url("../../assets/arrow-right.svg");
+  background-repeat: no-repeat;
+  background-size: 70%;
+  background-position: center;
 
-  @media($media_xxxl) {
-    right: 0;
+  @media(max-width: 1000px) {
+    right: 30%;
   }
 }
 

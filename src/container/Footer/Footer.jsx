@@ -37,7 +37,7 @@ const Footer = () => {
 
     return (
         <>
-            <h2 className={'head-text'}>Take a coffee & chat with me</h2>
+            <h2 className={'head-text'}>Сделайте себе кофе & свяжитесь со мной</h2>
 
             <div className={'app__footer-cards'}>
                 <div className={'app__footer-card'}>
@@ -54,24 +54,24 @@ const Footer = () => {
             {!isFormSubmitted ?
                 <div className="app__footer-form app__flex">
                     <div className={'app__flex'}>
-                        <input className={'p-text'} type="text" placeholder={'Your Name'} value={name}
+                        <input className={'p-text'} type="text" placeholder={'Ваше Имя'} value={name}
                                onChange={handleChangeInput} name={'name'}/>
                     </div>
 
                     <div className={'app__flex'}>
-                        <input className={'p-text'} type="email" placeholder={'Your Email'} value={email}
+                        <input className={'p-text'} type="email" placeholder={'Ваш Email'} value={email}
                                onChange={handleChangeInput} name={'email'}/>
                     </div>
 
                     <div>
                     <textarea value={message} name="message" onChange={handleChangeInput} className={'p-text'}
-                              placeholder={'Your Message'}/>
+                              placeholder={'Ваше Сообщение'}/>
                     </div>
 
-                    <button type={'button'} className={'p-text'} onClick={handleSubmit}>{loading ? 'Sending' : 'Send Message'}</button>
+                    <button type={'button'} className={'p-text'} onClick={handleSubmit}>{loading ? 'Отправляется' : 'Отправить сообщение'}</button>
                 </div>
                 : <div>
-                    <h3 className={'head-text'}>Thank you for getting in touch!</h3>
+                    <h3 className={'head-text'}>Спасибо, скоро я свяжусь с вами!</h3>
                 </div>
             }
 

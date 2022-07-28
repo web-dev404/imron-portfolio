@@ -34,12 +34,14 @@
     }
   }
 
-  @media screen and (max-width: 850px) {
+  @media screen and (max-width: 1000px) {
     width: 100%;
+    box-shadow: none;
   }
 
   @media screen and (max-width: 600px) {
     flex-direction: column;
+    padding: 20px 15px;
   }
 }
 
@@ -71,6 +73,16 @@
     color: var(--gray-color);
     margin-top: 5px;
   }
+
+  @media(max-width: 600px) {
+    padding: 0;
+    margin-top: 15px;
+
+    p {
+      font-size: 1rem;
+      line-height: 1.5rem;
+    }
+  }
 }
 
 .app__testimonial-brands {
@@ -86,17 +98,18 @@
       width: 100%;
       height: auto;
       object-fit: cover;
-      filter: grayscale(1);
       transition: all .3s;
 
-      @media screen and (max-width: 700px) {
-        filter: grayscale(0);
+      &.white {
+        background: var(--gray-color);
+        padding: 20px;
+        border-radius: 30px;
       }
     }
 
     &:hover {
       img {
-        filter: grayscale(0);
+        transform: scale(1.1);
       }
     }
 
@@ -118,9 +131,13 @@
 
 .swiper {
   max-width: 100% !important;
-  padding: 25px 0 !important;
+  padding: 20px 0 70px 0 !important;
+
+  @media(max-width: 700px) {
+    padding-bottom: 40px !important;
+  }
 }
 
-.swiper-slide {
+.app__testimonial .swiper-slide {
   width: 100% !important;
 }

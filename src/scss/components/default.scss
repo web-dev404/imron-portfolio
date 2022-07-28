@@ -1,10 +1,31 @@
+html,
+body {
+  scrollbar-color: #313bac #000;
+  /* «цвет ползунка» «цвет полосы скроллбара» */
+  scrollbar-width: thin;
+  /* толщина */
+
+}
+
 body {
   overflow-x: hidden;
   position: relative;
-  @include font('DM Sans', 400);
 
   &.active-body {
     overflow: hidden;
+  }
+
+  /* полоса прокрутки (скроллбар) */
+  &::-webkit-scrollbar {
+    width: 10px;
+    /* высота для горизонтального скролла */
+    background-color: none;
+  }
+
+  /* ползунок скроллбара */
+  &::-webkit-scrollbar-thumb {
+    background: rgb(83, 31, 181);
+    border-radius: 9em;
   }
 }
 
@@ -63,7 +84,7 @@ button {
   flex: 1;
   width: 100%;
   flex-direction: column;
-  padding: 4rem 2rem;
+  padding: 4rem 0;
 
   @media screen and (max-width: 450px) {
     padding: 4rem 1rem 2rem;
@@ -139,7 +160,7 @@ button {
 
   padding: 1rem;
 
-  div {
+  a {
     width: 40px;
     height: 40px;
     border-radius: 50%;

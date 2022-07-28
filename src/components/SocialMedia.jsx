@@ -1,20 +1,19 @@
 "use strict";
 import React from 'react';
-import {BsTwitter, BsInstagram} from "react-icons/bs";
-import {FaFacebookF} from "react-icons/fa";
+import {BsWhatsapp, BsInstagram, BsTelegram} from "react-icons/bs";
 
 const SocialMedia = () => {
     return (
         <div className={'app__social'}>
-            <div>
-                <BsTwitter />
-            </div>
-            <div>
-                <FaFacebookF />
-            </div>
-            <div>
+            <a target={"_blank"} href={'https://t.me/WebDev404'}>
+                <BsTelegram />
+            </a>
+            <a target={"_blank"} href={'https://wa.me/+998946053999'}>
+                <BsWhatsapp />
+            </a>
+            <a target={"_blank"} href={'https://www.instagram.com/imron_mirzarasulov/'}>
                 <BsInstagram />
-            </div>
+            </a>
         </div>
     )
 }

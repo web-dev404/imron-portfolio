@@ -14,6 +14,33 @@ const Skills = () => {
         const query = '*[_type == "experiences"]';
         const skillsQuery = '*[_type == "skills"]';
 
+        const works = [
+            {
+                year: 2019,
+                name: 'Front-End Разработчик',
+                company: 'Weblancer',
+                descr: 'Брал заказы на Weblancer'
+            },
+            {
+                year: 2020,
+                name: 'Front-End Разработчик',
+                company: 'OpenShop',
+                descr: 'Работал в интернет магазине OpenShop в качестве Front-End разработчика'
+            },
+            {
+                year: 2021,
+                name: 'Front-End Разработчик',
+                company: 'Freelancehunt',
+                descr: 'Брал заказы на бирже фриланса Freelancehunt'
+            },
+            {
+                year: 2022,
+                name: 'Front-End Разработчик',
+                company: 'Kelyan Media',
+                descr: 'Работал в компании Kelyan Media в качестве Front-End React разработчика'
+            },
+        ]
+
         client.fetch(query)
             .then((data) => {
                 setExperience(data);
@@ -27,7 +54,7 @@ const Skills = () => {
 
     return (
         <>
-            <h2 className={'head-text'}>Skills & Experience</h2>
+            <h2 className={'head-text'}>Навыки & Опыт</h2>
 
             <div className="app__skills-container">
                 <motion.div
