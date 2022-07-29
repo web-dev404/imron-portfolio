@@ -78,7 +78,7 @@ const Work = () => {
                                     >
                                         <a>
                                             <motion.div
-                                                whileView={{scale: [0, 1]}}
+                                                whileInView={{scale: [0, 1]}}
                                                 whileHover={{scale: [1, .9]}}
                                                 transition={{duration: .25}}
                                                 className={'app__flex'}
