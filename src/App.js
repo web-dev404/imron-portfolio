@@ -10,7 +10,7 @@ const App = () => {
     useEffect(() => {
         let mask = document.querySelector('.Preloader');
 
-        window.onload = () => {
+        document.querySelector('.profile__img').onload = () => {
             document.querySelector('body').style.overflowY = 'auto';
             setIsLoading(false);
         }

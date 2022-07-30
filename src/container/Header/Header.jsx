@@ -45,7 +45,7 @@ const Header = () => {
                 transition={{duration: .5, delayChildren: .5}}
                 className={'app__header-img'}
             >
-                <img src={images.profile2} alt="profile_bg"/>
+                <img className={'profile__img'} src={images.profile2} alt="profile_bg"/>
 
                 <motion.img
                     whileInView={{scale: [0, 1]}}
