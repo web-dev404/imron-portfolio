@@ -10,10 +10,10 @@ const App = () => {
     useEffect(() => {
         let mask = document.querySelector('.Preloader');
 
-        setTimeout(() => {
+        window.onload = () => {
             document.querySelector('body').style.overflowY = 'auto';
             setIsLoading(false);
-        }, 2000)
+        }
     }, []);
     return (
         <div className={'app'}>
