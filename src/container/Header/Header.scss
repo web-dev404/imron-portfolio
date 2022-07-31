@@ -183,3 +183,36 @@
     margin: 2rem 0;
   }
 }
+
+.cv-btn {
+  background: var(--secondary-color);
+  border-radius: 15px;
+  padding: 15px 20px;
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+
+  &:hover {
+    span {
+      transform: translateY(-8px);
+    }
+  }
+
+  span {
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    background: rgba(0, 157, 255, .5);
+    margin-left: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition: all .3s;
+  }
+
+  svg {
+    width: 60%;
+    height: 60%;
+  }
+}

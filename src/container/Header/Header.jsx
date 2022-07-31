@@ -4,6 +4,8 @@ import './Header.scss';
 import {motion} from 'framer-motion'
 import {images} from '../../constants';
 import {AppWrap} from '../../wrapper'
+import {FiDownload} from "react-icons/fi";
+import summary from '../../assets/summary.docx';
 
 const scaleVariants = {
     whileInView: {
@@ -37,6 +39,8 @@ const Header = () => {
                         <div className="p-text">Front-End Разработчик</div>
                         <div className="p-text">3 года опыта</div>
                     </div>
+
+                    <a href={summary} className={'cv-btn'}>Скачать CV <span><FiDownload/></span></a>
                 </div>
             </motion.div>
 
