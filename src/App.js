@@ -8,8 +8,6 @@ const App = () => {
     const [isLoading, setIsLoading] = useState(true);
 
     useEffect(() => {
-        let mask = document.querySelector('.Preloader');
-
         document.querySelector('.profile__img').onload = () => {
             document.querySelector('body').style.overflowY = 'auto';
             setIsLoading(false);

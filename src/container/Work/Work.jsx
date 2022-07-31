@@ -56,6 +56,7 @@ const Work = () => {
                     navigation
                     loop={true}
                     spaceBetween={20}
+                    autoHeight={true}
                     breakpoints={{
                         1700: {
                             slidesPerView: 3,

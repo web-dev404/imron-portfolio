@@ -41,6 +41,7 @@ const Testimonial = () => {
                 slidesPerView={1}
                 navigation
                 loop={true}
+                autoHeight={true}
             >
                 {testimonials.map((tst, testIndex) => (
                     <SwiperSlide key={testIndex}>
