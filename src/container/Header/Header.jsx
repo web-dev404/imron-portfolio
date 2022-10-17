@@ -2,6 +2,7 @@
 import {motion} from 'framer-motion'
 import React from 'react';
 import {FiDownload} from "react-icons/fi";
+import summaryEng from '../../assets/summary-english.docx';
 import summary from '../../assets/summary.docx';
 import {images} from '../../constants';
 import {AppWrap} from '../../wrapper'
@@ -19,6 +20,8 @@ const scaleVariants = {
 }
 
 const Header = () => {
+	const currentLanguage = localStorage.getItem('currentLang');
+	
 	return (
 		<div id={'home'} className={'app__header app__flex'}>
 			<motion.div
@@ -30,17 +33,19 @@ const Header = () => {
 					<div className="badge-cmp app__flex">
 						<span>👋</span>
 						<div style={{marginLeft: 20}}>
-							<p className="p-text">Привет, Я</p>
+							<p className="p-text">{currentLanguage === 'ru' ? 'Привет, Я' : 'Hello, I am'}</p>
 							<h1 className="head-text">Imron</h1>
 						</div>
 					</div>
 					
 					<div className="tag-cmp app__flex">
-						<div className="p-text">Front-End Разработчик</div>
-						<div className="p-text">3 года опыта</div>
+						<div className="p-text">{currentLanguage === 'ru' ? 'FrontEnd Разработчик' : 'FrontEnd Developer'}</div>
+						<div className="p-text">{currentLanguage === 'ru' ? '3 года опыта' : '3 years of experience'}</div>
 					</div>
 					
-					<a href={summary} className={'cv-btn'}>Скачать CV <span><FiDownload/></span></a>
+					<a href={currentLanguage === 'ru' ? summary : summaryEng}
+					   className={'cv-btn'}>{currentLanguage === 'ru' ? 'Скачать CV' : 'Download CV'}
+						<span><FiDownload/></span></a>
 				</div>
 			</motion.div>
 			
